@@ -1,0 +1,20 @@
+<h2>{{ user.name }}</h2>
+<h3>{{ user.age }}</h3>
+<h3>Watch List</h3>
+<ul>
+	{% for item in watch_list %}
+		<li>{{ item.anime.title }}</li>
+	{% endfor %}
+</ul>
+<h3>Currently Watching</h3>
+<ul>
+	{% for item in currently_watching_list %}
+		<li>{{ item.anime.title }}</li>
+	{% endfor %}
+</ul>
+<h3>Completed Anime</h3>
+<ul>
+	{% for item in completed_anime %}
+		<li>{{ item.anime.title }}</li>
+	{% endfor %}
+</ul>

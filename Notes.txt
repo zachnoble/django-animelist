@@ -1,0 +1,72 @@
+Simple Anime List App
+	Models:
+		- User: keeps track [want to watch, watching, completed] Anime
+		- Anime: Keeps Details about the anime to display
+
+
+	Views (types of pages):
+		- User "index" page: shows the user's current list (x number per page)
+			/<userId>/
+		- Anime "Details" page: show's details about a specific Anime
+			/<animeId>/details
+		- Search for Anime on MyAnimeList
+			/search/<searchRequest>/
+		- add Anime to User's list
+			/<animeId>/add
+		- remove Anime from User's List
+			/<animeId>/remove
+		- api calls to "MyAnimeList":
+			Searching: 	GET /anime
+			Details:	GET /anime/{anime_id}
+		- mark Anime as watching
+		- mark Anime as finished
+		- Oauth Stuff
+
+	Templates: 
+		- User "index" page   (remove anime)
+		- Anime "Search" Page (add anime)
+		- Anime "Details" Page (add anime)
+
+
+User:
+	name,
+	want_to_watch_list,
+	watching_list,
+	finished_list,
+
+Anime:
+	<data returned from a MyAnimeList API call>
+	"id",
+	"title",
+	"main_picture",
+	"alternative_titles",
+	"start_date",
+	"end_date",
+	"synopsis",
+	"mean",
+	"rank",
+	"popularity",
+	"num_list_users",
+	"num_scoring_users",
+	"nsfw",
+	"created_at",
+	"updated_at",
+	"media_type",
+	"status",
+	"genres",
+	"my_list_status",
+	"num_episodes",
+	"start_season",
+	"broadcast",
+	"source",
+	"average_episode_duration",
+	"rating",
+	"pictures",
+	"background",
+	"related_anime",
+	"related_manga",
+	"recommendations",
+	"studios",
+	"statistics",
+
+
